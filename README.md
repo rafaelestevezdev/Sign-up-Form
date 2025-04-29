@@ -8,7 +8,6 @@ Este formulario de registro presenta una interfaz moderna y atractiva con una pa
 
 ## ✨ Características
 
-- **Diseño responsive**: Adaptado a diferentes tamaños de pantalla
 - **Interfaz dividida**: Sección de imagen y sección de formulario
 - **Paleta de colores cálida**: Inspirada en tonos de atardecer
 - **Validación de campos**: Requisitos mínimos para contraseñas y campos obligatorios
