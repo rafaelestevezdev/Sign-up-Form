@@ -1,0 +1,259 @@
+/* Importación de fuentes de Google Fonts (Ubuntu y Poppins) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+/* Sistema de diseño con variables CSS para mantener consistencia en todo el proyecto 
+   Paleta de colores inspirada en un atardecer con tonos cálidos */
+:root {
+  --color-primary: #FF7B54; /* Naranja atardecer - Color principal */
+  --color-primary-dark: #E45826; /* Naranja oscuro - Para hover y elementos destacados */
+  --color-secondary: #D864A9; /* Rosa atardecer - Color secundario */
+  --color-background: #FFFBF5; /* Blanco cálido - Fondo principal */
+  --color-text: #3D3B40; /* Gris oscuro - Texto principal */
+  --color-text-light: #6D6A75; /* Gris medio - Textos secundarios y etiquetas */
+  --color-border: #FFD8A9; /* Durazno claro - Bordes y separadores */
+  --color-error: #E45826; /* Naranja oscuro para mensajes de error */
+  --gradient-sunset: linear-gradient(to right, #FF7B54, #D864A9); /* Gradiente para botones y elementos destacados */
+  --shadow: 0 8px 20px rgba(228, 88, 38, 0.1); /* Sombra con tono cálido */
+  --border-radius: 8px; /* Radio de borde consistente */
+  --font-primary: 'Ubuntu', sans-serif; /* Fuente principal */
+  
+  /* Sistema de espaciado para mantener ritmo vertical y horizontal consistente */
+  --spacing-xs: 5px;
+  --spacing-sm: 10px;
+  --spacing-md: 15px;
+  --spacing-lg: 20px;
+  --spacing-xl: 30px;
+  --spacing-xxl: 50px;
+}
+
+/* Estilos base del cuerpo del documento */
+body {
+    font-family: var(--font-primary);
+    background-color: var(--color-background);
+    color: var(--color-text);
+}
+
+/* Reset global para eliminar márgenes y padding predeterminados */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Clase para eliminar márgenes y asegurar que el contenido ocupe toda la pantalla */
+.noMargin {
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+}
+
+/* Contenedor principal que divide la página en dos secciones */
+#container {
+    display: flex;
+    height: 100vh;
+    background-color: var(--color-background);
+}
+
+/* Imagen de fondo que ocupa toda la altura de la pantalla */
+.backgroundImage {
+    height: 100vh;
+    width: 800px;
+    display: block;
+    object-fit: cover;
+}
+  
+/* Contenedor de la imagen con posicionamiento relativo para el texto superpuesto */
+.imageContainer {
+    position: relative;
+    width: auto;
+    overflow: hidden;
+}
+  
+/* Estilo para el texto y logo superpuestos en la imagen */
+.overlayText {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: absolute;
+    top: 40%;
+    left: 0;
+    right: 0;
+    color: white;
+    padding: var(--spacing-lg) 0;
+    backdrop-filter: blur(2px); /* Efecto de desenfoque para mejorar legibilidad */
+}
+
+/* Estilo para el texto "Odin" superpuesto en la imagen */
+.odinText {
+    margin-top: 50px;
+    font-size: 100px;
+    color: white; 
+    font-family: "NorseBold", sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra para mejorar contraste */
+}
+
+/* Estilo para el logo de Odin */
+.logo {
+    height: 175px;
+    width: auto;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3)); /* Sombra para el logo */
+}
+
+/* Contenedor del formulario de registro */
+.registrationForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    width: 100%;
+    padding: 0 var(--spacing-lg);
+}
+
+/* Cabecera con texto introductorio */
+.header {
+    display: flex;
+    align-self: start;
+    margin-bottom: 50px;
+    font-size: large;
+}
+
+/* Estilo para el texto de la cabecera */
+.header h2 {
+    font-weight: 400;
+    line-height: 1.7;
+    color: var(--color-text-light);
+    max-width: 600px;
+}
+
+/* Contenedor de los campos del formulario */
+#formFields {
+    display: flex;
+    width: 100%;
+    background-color: white;
+    align-items: center;
+    align-self: start;
+    flex-direction: column;
+    box-shadow: var(--shadow);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-xl) 0;
+    border: none;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Estilo para los encabezados h2 */
+h2 {
+    margin-left: 100px;
+    color: var(--color-text);
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+/* Columna izquierda del formulario */
+.leftColumn {
+    display: flex;
+    flex-direction: column;
+    margin-left: 100px;
+}
+
+/* Columna derecha del formulario */
+.rightColumn {
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+}
+
+/* Estilo para los campos de entrada */
+input {
+    border: 1px solid var(--color-border);
+    color: var(--color-text);
+    width: 250px;
+    height: 25px;
+    font-size: large;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: var(--border-radius);
+    transition: border-color 0.3s, box-shadow 0.3s; /* Transición suave para estados de foco */
+}
+
+/* Estilo para los campos de entrada cuando tienen foco */
+input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 2px rgba(255, 123, 84, 0.2); /* Efecto de resplandor */
+}
+
+/* Estilo para las etiquetas de los campos */
+label {
+    font-family: var(--font-primary);
+    color: var(--color-text-light);
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    margin-bottom: 5px;
+}
+
+/* Pie del formulario que contiene el botón y enlace */
+.footer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-self: start;
+    margin-left: 100px;
+    margin-top: 50px;
+}
+
+/* Estilo para el botón principal */
+button {
+    background: var(--gradient-sunset); /* Gradiente decorativo */
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 12px 32px;
+    cursor: pointer;
+    color: white;
+    transition: transform 0.2s, box-shadow 0.2s; /* Transición para efectos al pasar el ratón */
+    box-shadow: 0 4px 6px rgba(228, 88, 38, 0.2);
+}
+
+/* Efectos al pasar el ratón por el botón */
+button:hover {
+    transform: translateY(-2px); /* Efecto de elevación */
+    box-shadow: 0 6px 12px rgba(228, 88, 38, 0.3); /* Sombra más pronunciada */
+}
+
+/* Estilo para el texto de "Already have an account?" */
+h3 {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--color-text);
+}
+
+/* Estilo para el enlace "Log in" */
+h3 a {
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+/* Efecto al pasar el ratón por el enlace */
+h3 a:hover {
+    color: var(--color-primary-dark);
+    text-decoration: underline;
+}
+
+/* Fila flexible para organizar elementos horizontalmente */
+.flexRow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-self: start;
+    border-left-width: 0;
+    border-right-width: 0;
+    width: 100%;
+    padding: 0 var(--spacing-lg);
+}
+

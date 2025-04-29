@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Metadatos básicos: codificación, viewport y descripción -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Registration form for Odin Project">
+  <title>Odin Project - Sign Up</title>
+  <!-- Enlaces a recursos externos: hojas de estilo e icono -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="assets/icon/icon.png">
+</head>
+
+<body class="noMargin">
+  <!-- Contenedor principal que divide la página en dos secciones -->
+  <div id="container">
+    <!-- Sección izquierda: imagen de fondo con logo superpuesto -->
+    <div class="imageContainer">
+      <img class="backgroundImage" src="assets/img/wallpaper.jpg" alt="Nordic forest background image">
+      <!-- Texto y logo superpuestos a la imagen -->
+      <h1 class="overlayText">
+        <img class="logo" src="assets/logo/odin-logo.png" alt="Odin Project Logo">
+        <span class="odinText">Odin</span>
+      </h1>
+    </div>
+
+    <!-- Sección derecha: formulario de registro -->
+    <div class="registrationForm">
+      <!-- Cabecera con texto introductorio -->
+      <div class="header">
+        <h2>
+          This is not a real service! You know you need something <br>
+          like this in your life to help you realize your deepest dreams. <br>
+          Sign up now to get started. <br><br>
+          You know you want to.
+        </h2>
+      </div>
+
+      <!-- Campos del formulario -->
+      <div id="formFields">
+        <!-- Título del formulario -->
+        <div class="flexRow">
+          <h2>Let's do this!</h2>
+        </div>
+        <!-- Estructura en dos columnas para los campos -->
+        <div class="flexRow">
+          <!-- Columna izquierda: nombre, email y contraseña -->
+          <div class="leftColumn">
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" name="firstName" required autocomplete="given-name">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required autocomplete="email">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required minlength="8" autocomplete="new-password">
+          </div>
+
+          <!-- Columna derecha: apellido, teléfono y confirmación de contraseña -->
+          <div class="rightColumn">
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" name="lastName" required autocomplete="family-name">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{9,}" required autocomplete="tel">
+            <label for="confirmPassword">Confirm Password</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required minlength="8" autocomplete="new-password">
+          </div>
+        </div>
+      </div>
+
+      <!-- Pie del formulario con botón de acción y enlace de inicio de sesión -->
+      <div class="footer">
+        <button>Create Account</button>
+        <h3>Already have an account? <a href="#">Log in</a></h3>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
