@@ -2,8 +2,6 @@
 
 Este proyecto es una página de registro inspirada en el estilo de Odin Project, creada como parte del curso de desarrollo web.
 
-![Vista previa del proyecto](assets/img/wallpaper.jpg)
-
 ## 📋 Descripción
 
 Este formulario de registro presenta una interfaz moderna y atractiva con una paleta de colores inspirada en un atardecer. Combina elementos visuales como una imagen de fondo con un formulario funcional que recoge información de los usuarios.
@@ -29,7 +27,6 @@ Este formulario de registro presenta una interfaz moderna y atractiva con una pa
 /
 ├── index.html         # Estructura HTML principal
 ├── style.css          # Estilos y diseño visual
-├── script.js          # Archivo para futura implementación de JavaScript
 └── assets/            # Recursos multimedia
     ├── icon/          # Iconos de la aplicación
     ├── img/           # Imágenes de fondo
@@ -54,5 +51,4 @@ Este proyecto es parte de los ejercicios de [The Odin Project](https://www.theod
 - Implementación de formularios HTML semánticos y accesibles
 - Uso de variables CSS para mantener consistencia en el diseño
 - Posicionamiento y superposición de elementos
-- Diseño web responsivo
 - Validación de formularios con atributos HTML5
